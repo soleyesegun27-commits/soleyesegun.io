@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soleye Segun | Digital Marketer</title>
+<meta name="description" content="Soleye Segun is a digital marketer specialising in SEO, paid ads, email marketing and content strategy.">
+<meta name="theme-color" content="#100a1a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#100a1a; --panel:#1a1228; --line:#33264d;
+  --text:#f1ecfa; --mute:#a99bc6;
+  --pink:#ff4fa3; --ice:#8fd3ff;
+  --display:"Syne","Trebuchet MS",Arial,sans-serif;
+  --body:"DM Sans","Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{color-scheme:dark;scroll-behavior:smooth}
+body{background:var(--ink);color:var(--text);font:400 1.05rem/1.65 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(60rem 40rem at 50% -10%,rgba(255,79,163,.16),transparent 70%),radial-gradient(40rem 30rem at 100% 60%,rgba(143,211,255,.08),transparent 70%)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ice);outline-offset:3px;border-radius:6px}
+.wrap{position:relative;max-width:1080px;margin:0 auto;padding:0 1.5rem}
+
+/* nav: floating pill */
+nav{position:sticky;top:14px;z-index:10;display:flex;justify-content:center;padding:0 1rem}
+nav ul{display:flex;gap:.25rem;list-style:none;background:rgba(26,18,40,.82);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:999px;padding:.35rem}
+nav a{display:block;text-decoration:none;color:var(--mute);padding:.5rem 1.1rem;border-radius:999px;font-size:.95rem;font-weight:500;transition:background .2s,color .2s}
+nav a:hover{background:var(--pink);color:#1c0613}
+
+/* hero */
+.hero{text-align:center;padding:5rem 0 3rem}
+.hero .tag{color:var(--ice);font-weight:500;margin-bottom:1rem}
+h1{font:800 clamp(3rem,10.5vw,7.8rem)/.95 var(--display);letter-spacing:-.04em}
+h1 span{display:block;background:linear-gradient(95deg,var(--pink),var(--ice));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lede{max-width:34rem;margin:1.75rem auto 0;color:var(--mute);font-size:1.15rem}
+
+/* orbit: the memorable element */
+.orbit{position:relative;width:min(88vw,470px);aspect-ratio:1;margin:3.5rem auto 0}
+.ring{position:absolute;border:1px dashed var(--line);border-radius:50%}
+.arm{position:absolute;border-radius:50%;animation:spin var(--t) linear infinite;animation-delay:var(--d,0s)}
+.arm .chip{position:absolute;top:0;left:50%;margin:-1.1rem 0 0 -3rem;width:6rem;text-align:center;font:600 .82rem var(--body);padding:.4rem 0;border-radius:999px;background:var(--panel);border:1px solid var(--pink);animation:spin var(--t) linear infinite reverse;animation-delay:var(--d,0s)}
+.arm:nth-of-type(even) .chip{border-color:var(--ice)}
+.core{position:absolute;inset:39%;border-radius:50%;display:grid;place-items:center;font:800 clamp(1.4rem,5vw,2.2rem) var(--display);background:linear-gradient(135deg,var(--pink),var(--ice));color:#14081f;box-shadow:0 0 70px rgba(255,79,163,.45)}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ticker */
+.ticker{margin:4rem 0 0;border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;background:rgba(26,18,40,.6)}
+.ticker div{display:inline-block;padding:1rem 0;animation:slide 34s linear infinite;font:600 1.3rem var(--display);color:var(--mute)}
+.ticker b{color:var(--pink);margin:0 1.5rem;font-weight:600}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+section{padding:6rem 0 0}
+h2{font:800 clamp(2rem,5vw,3.4rem)/1.05 var(--display);letter-spacing:-.03em;margin-bottom:.75rem}
+.sub{color:var(--mute);max-width:34rem;margin-bottom:2.5rem}
+
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:26px;padding:2rem;display:flex;flex-direction:column;justify-content:space-between;gap:1.5rem;min-height:250px;transition:border-color .25s,transform .25s}
+.card:hover{border-color:var(--pink);transform:translateY(-4px)}
+.card h3{font:800 1.9rem/1.1 var(--display);letter-spacing:-.02em;margin-bottom:.6rem}
+.card p{color:var(--mute);max-width:30rem}
+.card ul{list-style:none;display:flex;flex-wrap:wrap;gap:.4rem}
+.card li{font-size:.85rem;padding:.25rem .75rem;border-radius:999px;background:rgba(255,255,255,.06)}
+.c1{grid-column:span 4;background:linear-gradient(140deg,#2a1440,var(--panel))}
+.c2{grid-column:span 2}
+.c3{grid-column:span 2}
+.c4{grid-column:span 4;background:linear-gradient(220deg,#10283a,var(--panel))}
+
+/* results */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.stat{border-top:3px solid var(--pink);padding:1.5rem 0 0}
+.stat:nth-child(2){border-color:var(--ice)}
+.stat .n{font:800 clamp(3rem,7vw,4.8rem)/1 var(--display);letter-spacing:-.04em;background:linear-gradient(95deg,var(--pink),var(--ice));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat h3{font:700 1.2rem var(--body);margin:.6rem 0 .3rem}
+.stat p{color:var(--mute);font-size:.98rem}
+
+/* about + toolkit */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.two p{color:var(--mute);margin-bottom:1rem}
+.two p:first-of-type{color:var(--text);font-size:1.2rem}
+.tools{display:flex;flex-wrap:wrap;gap:.55rem}
+.tools span{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:.4rem 1rem;font-size:.93rem}
+
+/* contact */
+.cta{margin-top:6rem;text-align:center;background:linear-gradient(135deg,var(--pink),#b06bff 55%,var(--ice));border-radius:34px;padding:4rem 1.5rem;color:#14081f}
+.cta h2{margin-bottom:1rem}
+.cta a.mail{display:inline-block;font:800 clamp(1.15rem,4.2vw,2.2rem) var(--display);text-decoration:none;background:#14081f;color:var(--text);padding:.9rem 2rem;border-radius:999px;word-break:break-word;transition:transform .2s}
+.cta a.mail:hover{transform:scale(1.04)}
+.links{display:flex;justify-content:center;gap:1.5rem;margin-top:1.75rem;font-weight:600;flex-wrap:wrap}
+footer{padding:2.5rem 0;text-align:center;color:var(--mute);font-size:.9rem}
+
+@media(max-width:780px){
+  .bento{grid-template-columns:1fr}
+  .c1,.c2,.c3,.c4{grid-column:auto}
+  .stats,.two{grid-template-columns:1fr}
+  .two{gap:2rem}
+  nav a{padding:.45rem .75rem;font-size:.88rem}
+}
+@media(prefers-reduced-motion:reduce){
+  .arm,.arm .chip,.ticker div{animation:none}
+  .card{transition:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<nav aria-label="Main">
+  <ul>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="tag">Digital marketer</p>
+    <h1>Soleye <span>Segun</span></h1>
+    <p class="lede">Four channels working as one system: search, paid ads, email and content, all aimed at measurable growth.</p>
+
+    <div class="orbit" aria-hidden="true">
+      <div class="ring" style="inset:0"></div>
+      <div class="ring" style="inset:11%"></div>
+      <div class="ring" style="inset:22%"></div>
+      <div class="ring" style="inset:33%"></div>
+      <div class="arm" style="inset:0;--t:36s"><span class="chip">SEO</span></div>
+      <div class="arm" style="inset:11%;--t:26s;--d:-9s"><span class="chip">Paid ads</span></div>
+      <div class="arm" style="inset:22%;--t:19s;--d:-4s"><span class="chip">Email</span></div>
+      <div class="arm" style="inset:33%;--t:14s;--d:-11s"><span class="chip">Content</span></div>
+      <div class="core">SS</div>
+    </div>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true">
+  <div>
+    Search rankings<b>✦</b>Google Ads<b>✦</b>Meta Ads<b>✦</b>Email flows<b>✦</b>Content strategy<b>✦</b>Conversion tracking<b>✦</b>Keyword research<b>✦</b>A/B testing<b>✦</b>
+    Search rankings<b>✦</b>Google Ads<b>✦</b>Meta Ads<b>✦</b>Email flows<b>✦</b>Content strategy<b>✦</b>Conversion tracking<b>✦</b>Keyword research<b>✦</b>A/B testing<b>✦</b>
+  </div>
+</div>
+
+<main>
+<section id="services">
+  <div class="wrap">
+    <h2>What I do</h2>
+    <p class="sub">Each service stands alone, and works best alongside the others.</p>
+    <div class="bento">
+      <article class="card c1">
+        <div><h3>SEO strategies</h3><p>Technical audits, keyword and intent mapping, and content built to rank for the searches your buyers make. Reported in leads and revenue, not just positions.</p></div>
+        <ul><li>Technical audits</li><li>Keyword research</li><li>On-page SEO</li><li>Link building</li><li>Local SEO</li></ul>
+      </article>
+      <article class="card c2">
+        <div><h3>Paid ads</h3><p>Search, social and retargeting campaigns tuned for cost per acquisition and return on ad spend.</p></div>
+        <ul><li>Google Ads</li><li>Meta Ads</li><li>Retargeting</li></ul>
+      </article>
+      <article class="card c3">
+        <div><h3>Email marketing</h3><p>Welcome, cart-recovery and win-back flows that raise customer lifetime value.</p></div>
+        <ul><li>Automation</li><li>Segmentation</li><li>A/B tests</li></ul>
+      </article>
+      <article class="card c4">
+        <div><h3>Content strategy</h3><p>Editorial plans that link audience questions to your offer. Every piece has one job: attract, convince or convert.</p></div>
+        <ul><li>Content audits</li><li>Editorial calendars</li><li>Brand voice</li><li>Landing pages</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="results">
+  <div class="wrap">
+    <h2>Results</h2>
+    <p class="sub">Outcomes from recent campaigns.</p>
+    <!-- EDIT: replace the figures, titles and descriptions below with Soleye's real results. -->
+    <div class="stats">
+      <div class="stat"><div class="n">+212%</div><h3>Organic traffic in 8 months</h3><p>Rebuilt site structure and published intent-led category content for an online retailer.</p></div>
+      <div class="stat"><div class="n">4.3x</div><h3>Return on ad spend</h3><p>Restructured campaigns and moved budget to the audiences with the lowest acquisition cost.</p></div>
+      <div class="stat"><div class="n">38%</div><h3>Of revenue from email</h3><p>Launched lifecycle flows with segmented campaigns running on top.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap two">
+    <div>
+      <h2>About</h2>
+      <p>I’m Soleye Segun, a digital marketer who treats every channel as part of one growth system.</p>
+      <p>Years of hands-on work across SEO, paid media, email and content have taught me that good marketing starts with clear goals and honest measurement. I work with founders and teams who want a partner that explains the numbers and owns the outcome.</p>
+    </div>
+    <div>
+      <h2>Toolkit</h2>
+      <div class="tools">
+        <span>Google Analytics 4</span><span>Search Console</span><span>Semrush</span><span>Ahrefs</span>
+        <span>Google Ads</span><span>Meta Ads Manager</span><span>Mailchimp</span><span>Klaviyo</span>
+        <span>HubSpot</span><span>Looker Studio</span><span>Screaming Frog</span><span>Canva</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="cta">
+      <h2>Let’s grow your brand</h2>
+      <p style="margin-bottom:1.75rem">Tell me your goals and I’ll reply within two working days.</p>
+      <a class="mail" href="mailto:soleyesegun27@gmail.com">soleyesegun27@gmail.com</a>
+      <!-- EDIT: replace these with Soleye's real profile links, or delete any you don't need. -->
+      <div class="links">
+        <a href="https://www.linkedin.com/in/your-handle" rel="noopener">LinkedIn</a>
+        <a href="https://x.com/your-handle" rel="noopener">X</a>
+        <a href="https://github.com/your-handle" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>© <span id="yr">2026</span> Soleye Segun. All rights reserved.</footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
